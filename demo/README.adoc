@@ -1,0 +1,121 @@
+= Sfeir School - The Current Sfeir School
+:uri-bespoke: http://markdalgleish.com/projects/bespoke.js
+:uri-node: https://nodejs.org
+:uri-nvm: https://github.com/creationix/nvm
+:uri-ruby: https://www.ruby-lang.org
+:uri-rvm: https://rvm.io
+:uri-ensuite: https://github.com/ensuite/ensuite-present
+:uri-decktape: https://github.com/astefanutti/decktape
+
+== View slides locally
+
+First, ensure you have the following installed:
+
+. {uri-node}[Node.js] >= 4.2 footnote:[You're strongly encouraged to use {uri-nvm}[nvm] to manage Node.]
+
+ $ nvm install stable && nvm use stable
+
+. {uri-ruby}[Ruby >= 2] footnote:[You're strongly encouraged to use {uri-rvm}[RVM] to manage Ruby.]
+
+ $ rvm install ruby --latest
+
+Then build and serve the presentation!
+
+ $ make serve-slides
+
+You can view the presentation in your browser at the URL displayed in the console.
+
+  $ make show-slides
+
+Use the kbd:[<-] and kbd:[->] arrows to navigate the slides.
+You can use kbd:[<space>] and kbd:[Shift+<space>] to navigate as well.
+Most presentation clickers are compatible with these key bindings.
+
+To build the presentation without starting the preview server, use:
+
+ $ make
+
+In either case, the files are built into the [.path]_dist_ directory.
+You can view the slides outside of the local preview server by navigating to [.path]_dist/index.html_ in your browser.
+
+== kbd:[o] -- Slide Overview Mode
+
+This presentation comes with a built-in slide overview mode.
+To activate it, simply visit the presentation in your browser and press kbd:[o].
+The slides will be rearranged in a grid that you can scroll or navigate with the keyboard.
+Press enter to select the highlighted slide and return to presentation mode.
+
+== kbd:[F11] -- Full Screen Mode
+
+This presentation will automatically scale to fit an entire 16:9 screen.
+Simply activate full screen mode in your browser by pressing kbd:[F11].
+
+== Using the Presentation Console
+
+This presentation can be broadcast and controlled using ensuite-present.
+{uri-ensuite}[ensuite-present] is a local web app that provides a presentation console.
+
+=== Overview
+
+The presentation console consists of two browser windows.
+One is for the presentation console the speaker sees.
+This view consists of the current slide, the next slide, and speaker notes.
+The speaker notes in the console are taken from the sidebar block in each slide that has the role `cue`.
+The other view is the one that goes on the projector screen for the audience to see.
+
+=== Launch
+
+Open a new terminal and launch the application, which is named `enprez` via its makefile task.
+
+ $ make serve-presentation
+
+NOTE: You don't need to have a running presentation when you launch the application.
+It's a web app, so it loads the presentation when you load the URL of the console in your browser.
+
+In a separate terminal, run the presentation, as described above:
+
+ $ make serve-slides
+
+Finally, launch the broadcasting of this presentation:
+
+ $ make show-presentation
+
+You're looking at the speaker view and the audience view.
+You can use this view to practice your presentation.
+
+When you're ready to present, you need move the viewer window to the projected monitor for the audience to see.
+
+At this point, you're ready to start your presentation.
+Good luck!
+
+== Customizing the Port
+
+By default, the preview server runs on port 8000.
+To change this default, you can assign a different number to the PORT environment variable:
+
+ $ PORT=8888 make serve-slides
+
+== Generate slides as pdf document
+
+After installation, you can generate a version of the slides as PDF document.
+
+In two separated terminals, you can run:
+
+ $ make serve-slides
+
+and after that, in another terminal,
+
+ $ make generate-pdf
+
+=== Known limitations
+
+If a slide have a gif as image in it, {uri-decktape}[decktape] (the pdf generator) will throw an error
+
+  Page error: DOMException: The element has no supported sources.
+  Printing slide #37      (37/38) ...
+
+If a slide have a video in it, {uri-decktape}[decktape] (the pdf generator) will throw an error
+
+  Page error: DOMException: The element has no supported sources.
+  Page error: DOMException: The element has no supported sources.
+  Printing slide #38      (38/38) ...

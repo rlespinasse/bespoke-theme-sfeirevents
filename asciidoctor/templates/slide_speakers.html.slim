@@ -1,0 +1,15 @@
+- [1, 2, 3].each do |_item|
+  - if attr? ['speaker', _item, 'name'].concat.join('-')
+    section.speaker
+      header
+        h2 Speaker
+      - _avatar = (attr ['speaker', _item, 'avatar'].concat.join('-'))
+      - _style = %[background-image: url(#{image_uri _avatar}); background-size: #{'480px 480px'}]
+      div.avatar-wrapper1
+        div.avatar-wrapper2
+          div.avatar-wrapper3
+            div.avatar-content style=_style
+      div.bio
+        p.name=(attr ['speaker', _item, 'name'].concat.join('-'))
+        p.position=(attr ['speaker', _item, 'position'].concat.join('-'))
+        p.twitter=(attr ['speaker', _item, 'twitter'].concat.join('-'))

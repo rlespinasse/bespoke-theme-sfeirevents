@@ -1,0 +1,18 @@
+= Presenter notes
+:icons: font
+:slide: pass:[icon:tv[]<br>]
+
+{slide}
+//tag::welcome[]
+Welcome message
+//end::welcome[]
+
+{slide}
+//tag::wifi[]
+All attendees can configure the wifi connection
+//end::wifi[]
+
+{slide}
+//tag::tweet[]
+All attendees can tweet on this sfeir school
+//end::tweet[]

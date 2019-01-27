@@ -1,0 +1,42 @@
+@page
+  size $slide-width $slide-height
+  margin 0
+
+@media print
+  pre, code, samp
+    -webkit-text-stroke-width 0
+
+  .bespoke-parent, .bespoke-scale-parent, .bespoke-slide
+    margin unset
+    position relative
+    top unset
+    right unset
+    bottom unset
+    left unset
+
+  .bespoke-parent
+    overflow visible
+
+  .bespoke-scale-parent
+    transform unset !important
+
+  .bespoke-slide
+    opacity 1
+    // page break should be implied, but is sometimes necessary
+    page-break-after always
+    // enable this next property to see where you're getting overflows
+    //overflow visible
+
+  .bespoke-bullet-inactive
+    opacity 1
+    visibility visible
+
+  .bespoke-slide.curtain::after
+    display none
+
+  .insert .bespoke-bullet-inactive
+    position static !important
+
+  .reveal .bespoke-bullet-inactive
+    position static !important
+    opacity 1

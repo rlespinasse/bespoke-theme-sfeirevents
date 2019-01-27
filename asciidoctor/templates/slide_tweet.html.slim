@@ -1,0 +1,25 @@
+- _hashtag = attr 'twitter-hashtag'
+- _agency = attr 'twitter-sfeiragency'
+- _speaker1_handle = attr 'speaker-1-twitter'
+- _speaker2_handle = attr 'speaker-2-twitter'
+- _speaker3_handle = attr 'speaker-3-twitter'
+- _school_code = attr 'school-code'
+- _school_level = attr 'school-level'
+section.tweet.schoollogo.bg-blue
+  - content_for :content
+    header
+      h2 If you like this Sfeir School, send a tweet !
+      p.hashtag=['#sfeirschool', _hashtag].compact.join(' ')
+      p.mentions=['@sfeir', _agency, _speaker1_handle, _speaker2_handle, _speaker3_handle].compact.join(' ')
+    p.schoolcode=_school_code
+    div class=['schoollevel', ('level' + _school_level)]
+    - unless (_content = content).empty?
+      =_content
+  - if (option? :enclose) || (document.attr? 'enclose-option')
+    - _notes = pluck_first context: :sidebar, role: 'cue'
+    .content
+      - yield_content :content
+    - if _notes
+      =_notes.convert
+  - else
+    - yield_content :content

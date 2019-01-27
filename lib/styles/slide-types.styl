@@ -1,0 +1,344 @@
+// Global
+.deck
+  background-color $c-black
+
+.bespoke-active
+  pointer-events auto
+  opacity 1
+  // NOTE Webkit requires z-index to be 1 for elements to receive focus (may no longer apply)
+  z-index 1
+
+.bespoke-inactive
+  transition-delay 0
+
+// Progress bar
+.bespoke-overview
+  .bespoke-progress-parent
+    display none
+
+.bespoke-progress-parent
+  position absolute
+  bottom 0
+  left 0
+  right 0
+  height 3px
+  .bespoke-progress-bar
+    transition width .6s ease
+    position absolute
+    z-index 1
+    height 100%
+    background-color $color-progress-bar
+
+// Background
+.bespoke-slide
+  background #141414 url(images/background_white_1.png) no-repeat
+  background-position 50% 50%
+  background-size cover
+  &.nobg
+    background $c-white
+  &.bg1
+    background #141414 url(images/background_white_1.png) no-repeat
+  &.bg2
+    background #141414 url(images/background_white_2.png) no-repeat
+  &.bg3
+    background #141414 url(images/background_white_3.png) no-repeat
+  &.bg4
+    background #141414 url(images/background_white_4.png) no-repeat
+  &.bg5
+    background #141414 url(images/background_white_5.png) no-repeat
+  &.bg6
+    background #141414 url(images/background_white_6.png) no-repeat
+  &.bg7
+    background #141414 url(images/background_white_7.png) no-repeat
+  &.bg8
+    background #141414 url(images/background_white_8.png) no-repeat
+  &.bg-blue
+    background #141414 url(images/background_blue.png) no-repeat
+  &.bg-red
+    background #141414 url(images/background_red.png) no-repeat
+  &.bg-pink
+    background #141414 url(images/background_pink.png) no-repeat
+  &.bg-school
+    background #141414 url(images/background_school.png) no-repeat
+
+// Slide layouts
+section:not(.title):not(.topic):not(.tweet):not(.wifi):not(.schoollogo):not(.banner):not(.banner-bottom)
+  header
+    position absolute
+    top 0
+    h2
+      position relative
+      margin 20px 0 0 0
+      text-align center
+      color $color-accent
+      font-size rem-calc(60px)
+    h3
+      position relative
+      margin 10px 0 0 0
+      text-align center
+      color $color
+      font-size rem-calc(30px)
+  h2
+    position absolute
+    top 0
+    margin 20px 0 0 0
+    text-align center
+    color $color-accent
+    font-size rem-calc(60px)
+
+section
+  &.banner, &.banner-bottom
+    h2
+      position absolute
+      background rgba($color-muted, 0.6)
+      padding rem-calc(20px) 0
+      width 100%
+      text-align center
+      color $c-white
+      font-size rem-calc(100px)
+  &.banner h2
+    top 5%
+  &.banner-bottom h2
+    bottom 5%
+
+section
+  .area, .area-bottom, .area-right, .area-bottom-right
+    position absolute
+    background rgba($color-muted, 0.6)
+    padding rem-calc(20px)
+    text-align left
+    color $c-white
+    font-size 5rem
+  .area
+    top 10%
+    left 0
+  .area-bottom
+    bottom 10%
+    left 0
+  .area-right
+    top 10%
+    right 0
+  .area-bottom-right
+    bottom 10%
+    right 0
+
+section.axis
+  &.center > ul > li
+    text-align center
+  & > ul
+    display flex
+    flex-direction row
+    justify-content center
+    align-items stretch
+    text-align left
+    margin 0
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    & > li
+      font-size 3rem
+      font-weight 600
+      display flex
+      flex-direction column
+      flex 1
+      align-items center
+      justify-content center
+      text-align left
+      line-height 1.1
+      figure, pre
+        font-weight 400
+    ul
+      font-weight 400
+      font-size 1.5rem
+      text-align center
+
+section
+  &.axis
+    figure.listing
+      width 90%
+      pre, code
+        width 100%
+  figure.listing
+    width 60%
+    pre, code
+      width 100%
+
+section
+  &.axis
+    figure.image
+      width 90%
+      img
+        width 100%
+  &.with-background-image
+    figure.image
+      position absolute
+      z-index -1
+      width 100%
+  figure.image
+    width 70%
+    img
+      width 100%
+
+.bespoke-slide
+  &.title
+    h1
+      position relative
+      margin 20px 0 0 0
+      color $c-white
+      text-align center
+      font-size rem-calc(80px)
+    h2
+      position relative
+      margin 20px 0 0 0
+      color $c-white
+      font-size rem-calc(110px)
+      line-height 0.75
+      white-space nowrap
+
+.bespoke-slide
+  &.schoollogo
+    &::before
+      content ' '
+      position absolute
+      top 10%
+      height 100%
+      width 100%
+      background url(images/logo_empty.png) no-repeat
+      background-position 50% 0%
+    header
+      position relative
+      top 20%
+    .schoolcode
+      position absolute
+      top 26%
+      color $color-accent
+      text-align center
+      font-weight bold
+      font-size 6rem
+    .schoollevel
+      position absolute
+      transform scale(1.7)
+      top 45%
+
+.bespoke-slide
+  &.tweet
+    header
+      position relative
+      top 20%
+      margin 20px 0 0 0
+      h2
+        margin 20px 0 0 0
+        color $c-white
+        text-align center
+        white-space nowrap
+        font-size rem-calc(45px)
+      p
+        margin 20px 0 0 0
+        color $c-white
+        text-align center
+        white-space nowrap
+        font-size rem-calc(60px)
+        font-weight bold
+
+.bespoke-slide
+  &.wifi
+    .wifi-sid
+      position absolute
+      top 10%
+      left 5%
+    .wifi-password
+      position absolute
+      top 15%
+      left 5%
+    .wifi-sid, .wifi-password
+      margin 10px 0 0 0
+      color $text
+      font-size rem-calc(50px)
+      font-weight bold
+      span
+        color $color-accent
+
+.bespoke-slide
+  &.topic
+    &:not(.bg-red):not(.bg-pink)
+      background #141414 url(images/background_blue.png) no-repeat
+    &.bg-red h3
+      color $color-accent-red
+    &.bg-pink h3
+      color $color-accent-pink
+    h2
+      position relative
+      margin 0
+      color $c-white
+      text-align left
+      font-size rem-calc(80px)
+    h3
+      color $color-accent
+      font-size rem-calc(110px)
+      line-height 0.75
+
+
+.bespoke-slide
+  &.speaker
+    &::before
+      content ''
+      background url(images/logo_sfeir.png) no-repeat
+      height 431px
+      width 924px
+      transform scale(0.5)
+      position absolute
+      top 11%
+      left 36%
+    .bio
+      position absolute
+      top 35%
+      left 50%
+      .name
+        color $text
+        font-size rem-calc(65px)
+        font-weight bold
+      .position
+        color $color-muted
+        font-size rem-calc(45px)
+      .twitter
+        color $color-muted
+        font-size rem-calc(45px)
+    .avatar-wrapper1
+      position absolute
+      top 22%
+      left 16%
+      .avatar-wrapper2
+        overflow hidden
+        visibility hidden
+        -webkit-transform rotate(120deg)
+        -moz-transform rotate(120deg)
+        -ms-transform rotate(120deg)
+        -o-transform rotate(120deg)
+        transform rotate(120deg)
+        width 400px
+        height 800px
+        margin -160px 0 0 40px
+        .avatar-wrapper3
+          -webkit-backface-visibility hidden
+          overflow hidden
+          width 100%
+          height 100%
+          -webkit-transform rotate(-60deg)
+          -moz-transform rotate(-60deg)
+          -ms-transform rotate(-60deg)
+          -o-transform rotate(-60deg)
+          transform rotate(-60deg)
+          .avatar-content
+            -webkit-backface-visibility hidden
+            width 100%
+            height 100%
+            background-repeat no-repeat
+            background-position 50%
+            visibility visible
+            -webkit-transform rotate(-60deg)
+            -moz-transform rotate(-60deg)
+            -ms-transform rotate(-60deg)
+            -o-transform rotate(-60deg)
+            transform rotate(-60deg)

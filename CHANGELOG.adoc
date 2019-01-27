@@ -1,0 +1,28 @@
+= Changelog
+:uri-keepachangelog: https://keepachangelog.com/en/1.0.0/
+:uri-semver: https://semver.org/spec/v2.0.0.html
+
+All notable changes to this project will be documented in this file.
+
+The format is based on {uri-keepachangelog}[Keep a Changelog],
+and this project adheres to {uri-semver}[Semantic Versioning].
+
+== [Unreleased]
+
+=== Added
+
+* Add a theme for Bespokejs for Sfeir School slides.
+* Add support for Asciidoctor diagram generation.
+* Add support for Asciidoctor table markup.
+* Add an asciidoctor template to generate bespokejs section 
+** for `title` slide,
+** for `speaker` slide,
+** for `tweet` slide,
+** for `wifi` slide.
+* Add configuration for
+** the background image to use on `title` slide (blue, red, or pink),
+** the code of the Sfeir School,
+** the level of the Sfeir School (100, 200, or 300),
+** the tweet hashtag and sfeir agency to use,
+** the wifi configuration,
+** the configuration for speaker 1 to 3.

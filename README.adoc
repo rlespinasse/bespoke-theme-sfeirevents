@@ -1,0 +1,76 @@
+= bespoke-theme-sfeirschool
+:uri-bespokejs: http://markdalgleish.com/projects/bespoke.js
+:uri-bespoketheme: https://github.com/markdalgleish/generator-bespoketheme
+:uri-umd: https://github.com/umdjs/umd
+:uri-min: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/dist/bespoke-theme-sfeirschool.min.js
+:uri-dev: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/dist/bespoke-theme-sfeirschool.js
+:uri-images: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/lib/images
+:uri-templates: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/asciidoctor/templates
+:uri-demo-gulp: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/demo/gulpfile.js
+:uri-demo: http://rlespinasse.github.io/bespoke-theme-sfeirschool
+:uri-license: http://en.wikipedia.org/wiki/MIT_License
+
+A `Sfeir School` theme for {uri-bespokejs}[Bespoke.js] &mdash; {uri-demo}[View demo]
+
+== Download
+
+Download the {uri-min}[production version] or the {uri-dev}[development version], or use a <<Package managers,package manager>>.
+
+Download the {uri-images}[image] contents to the images directory (or {uri-demo-gulp}[use a gulp task to do so (view demo)]).
+
+Download the Asciidoctor {uri-templates}[templates] to the your templates directory and use it with `asciidoctor-bespoke` (or {uri-demo-gulp}[use a gulp task to do so (view demo)]).
+
+== Usage
+
+This theme is shipped in a {uri-umd}[UMD format], meaning that it is available as a CommonJS/AMD module or browser global.
+
+For example, when using CommonJS modules:
+
+[source,js]
+----
+var bespoke = require('bespoke'),
+  sfeirschool = require('bespoke-theme-sfeirschool');
+
+bespoke.from('#presentation', [
+  sfeirschool()
+]);
+----
+
+When using browser globals:
+
+[source,js]
+----
+bespoke.from('#presentation', [
+  bespoke.themes.sfeirschool()
+]);
+----
+
+== Package managers
+
+=== npm
+
+[source,bash]
+----
+$ npm install bespoke-theme-sfeirschool --save-dev
+----
+
+=== yarn
+
+[source,bash]
+----
+$ yarn add bespoke-theme-sfeirschool --dev
+----
+
+== More
+
+The demo folder can serve as bootstrap for your presentation.
+
+WARNING: in the `package.json` file, you will need to change the path to `bespoke-theme-sfeirschool` folder or `npm version` (when available).
+
+== Credits
+
+This theme was built with {uri-bespoketheme}[generator-bespoketheme].
+
+== License
+
+{uri-license}[MIT License]

@@ -1,0 +1,702 @@
+= Welcome to Sfeir School: The Current Sfeir School
+// GLOBAL CONFIGURATION
+:!sectids:
+:imagesdir: images
+:source-highlighter: highlight.js
+:highlightjs-theme: solarized-light
+:highlightjsdir: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0
+:icons: font
+:iconfont-remote:
+:iconfont-cdn: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+:docinfo: shared
+// CONFIGURATION CONTENT
+:uri-script: presenter.adoc
+:title-background: bg-blue
+//:title-background: bg-red
+//:title-background: bg-pink
+// CONFIGURATION SCHOOL
+:school-code: TCSS
+:school-level: 100
+//:school-level: 200
+//:school-level: 300
+:twitter-hashtag: #thecurrentsfeirschool
+:twitter-sfeiragency: @twitterhandle
+:wifi-sid: OUR_WIFI_NAME
+:wifi-password: OUR_WIFI_PASSWORD
+// CONFIGURATION SPEAKERS
+// speaker image must have dimensions equals to 480px per 480px,
+// and available under :imagesdir: folder
+:speaker-1-avatar: speakers/rlespinasse.jpg
+:speaker-1-name: Romain Lespinasse
+:speaker-1-position: Developer
+:speaker-1-twitter: @rlespinasse
+//:speaker-2-avatar: ...
+//:speaker-2-name: ...
+//:speaker-2-position: ...
+//:speaker-2-twitter: ...
+//:speaker-3-avatar: ...
+//:speaker-3-name: ...
+//:speaker-3-position: ...
+//:speaker-3-twitter: ...
+
+[.cue]
+****
+include::{uri-script}[tag=welcome]
+****
+
+[transform=wifi]
+== wifi
+
+[.cue]
+****
+include::{uri-script}[tag=wifi]
+****
+
+[transform=speakers]
+== speakers
+
+[transform=tweet]
+== tweet
+
+[.cue]
+****
+include::{uri-script}[tag=tweet]
+****
+
+[.topic]
+== blue (default): topic slide
+
+
+
+[.topic.bg-red]
+== red: topic slide
+
+
+
+[.topic.bg-pink]
+== pink: topic slide
+
+
+
+[.bg1]
+== Background 1
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.bg1]
+== Slide title
+
+Slide content
+----
+
+
+
+[.bg2]
+== Background 2
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.bg2]
+== Slide title
+
+Slide content
+----
+
+
+
+[.bg3]
+== Background 3
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.bg3]
+== Slide title
+
+Slide content
+----
+
+
+
+[.bg4]
+== Background 4
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.bg4]
+== Slide title
+
+Slide content
+----
+
+
+
+[.bg5]
+== Background 5
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.bg5]
+== Slide title
+
+Slide content
+----
+
+
+
+[.bg6]
+== Background 6
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.bg6]
+== Slide title
+
+Slide content
+----
+
+
+
+[.bg7]
+== Background 7
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.bg7]
+== Slide title
+
+Slide content
+----
+
+
+
+[.bg8]
+== Background 8
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.bg8]
+== Slide title
+
+Slide content
+----
+
+
+
+[.nobg]
+== Without Background
+
+in your asciidoctor document
+
+.content.adoc
+[source]
+----
+[.nobg]
+== Slide title
+
+Slide content
+----
+
+
+
+[.with-background-image]
+== Slide with specific background
+image::mountain.jpg[]
+
+.content.adoc
+[source]
+----
+[.with-background-image]
+== Slide title
+image::your_image.png[]
+----
+
+
+
+[%conceal.with-background-image]
+== Slide with hidden title
+image::road.jpg[]
+
+.content.adoc
+[source]
+----
+// '%conceal' will hide the slide title
+[%conceal.with-background-image]
+== Slide title
+image::your_image.png[]
+----
+
+
+
+[.banner.with-background-image]
+== Slide title as banner (top)
+image::mountain.jpg[]
+
+.content.adoc
+[source]
+----
+[.banner.with-background-image]
+== Slide title
+image::your_image.png[]
+----
+
+
+
+[.banner-bottom.with-background-image]
+== Slide title as banner (bottom)
+image::road.jpg[]
+
+.content.adoc
+[source]
+----
+[.banner-bottom.with-background-image]
+== Slide title
+image::your_image.png[]
+----
+
+
+
+[%conceal.with-background-image]
+== Hidden slide title
+image::mountain.jpg[]
+
+[.area]
+* set a top left area
+* of text with **[.area]**
+
+.content.adoc
+[source]
+----
+[%conceal.with-background-image]
+== Slide title
+image::your_image.png[]
+
+[.area]
+Some text
+----
+
+
+
+[%conceal.with-background-image]
+== Hidden slide title
+image::mountain.jpg[]
+
+[.area-bottom]
+* set a bottom left area
+* of text with **[.area-bottom]**
+
+.content.adoc
+[source]
+----
+[%conceal.with-background-image]
+== Slide title
+image::your_image.png[]
+
+[.area-bottom]
+Some text
+----
+
+
+
+[%conceal.with-background-image]
+== Hidden slide title
+image::road.jpg[]
+
+[.area-right]
+* set a top right area
+* of text with **[.area-right]**
+
+.content.adoc
+[source]
+----
+[%conceal.with-background-image]
+== Slide title
+image::your_image.png[]
+
+[.area-right]
+Some text
+----
+
+
+
+[%conceal.with-background-image]
+== Hidden slide title
+image::road.jpg[]
+
+[.area-bottom-right]
+* set a bottom right area
+* of text with **[.area-bottom-right]**
+
+.content.adoc
+[source]
+----
+[%conceal.with-background-image]
+== Slide title
+image::your_image.png[]
+
+[.area-bottom-right]
+Some text
+----
+
+
+
+== Slide title: with subtitle
+
+With this asciidoctor content
+
+.content.adoc
+[source]
+----
+== Slide title: with subtitle
+----
+
+
+
+[.axis]
+== Slide with two sides
+
+* You can define two texts
++
+with this asciidoctor content
+* {blank}
++
+.content.adoc
+[source]
+----
+[.axis]
+== Slide title
+
+* Left content
++
+Another paragraph
+* Right content
+----
+
+
+
+[.axis.center]
+== Slide with multiple 'centred' columns
+
+* School 100
++
+image::sfeir_school.png[]
+* School 200
++
+image::sfeir_school.png[]
+* School 300
++
+image::sfeir_school.png[]
+* Institute
++
+image::sfeir_institute.png[]
+
+
+
+== Slide with quote
+
+> I can do truly amazing things with my AsciiDoc source.
+> -- Scott Chacon, author of Pro Git
+
+with this asciidoctor content
+
+.content.adoc
+[source]
+----
+== Slide with quote
+
+> I can do truly amazing things with my AsciiDoc source.
+> -- Scott Chacon, author of Pro Git
+----
+
+
+
+== Slide with a lead paragraph
+
+[.lead]
+Some IMPORTANT text
+
+with this asciidoctor content
+
+.content.adoc
+[source]
+----
+[.lead]
+Some IMPORTANT text
+----
+
+
+
+== Slide with spotlight list
+
+[%build.spotlight]
+* Item 1
+* Item 2
+* Item 3
+* With this asciidoctor content
++
+.content.adoc
+[source]
+----
+[%build.spotlight]
+* Item 1
+* Item 2
+* Item 3
+----
+
+
+
+== Slide with hidden list
+
+[%build]
+* Item 1
+* Item 2
+* Item 3
+* With this asciidoctor content
++
+.content.adoc
+[source]
+----
+[%build]
+* Item 1
+* Item 2
+* Item 3
+----
+
+
+
+== Slide with hidden list (without the first item)
+
+[build=items]
+* Item 1
+* Item 2
+* Item 3
+* With this asciidoctor content
++
+.content.adoc
+[source]
+----
+[build=items]
+* Item 1
+* Item 2
+* Item 3
+----
+
+
+
+== Slide with table
+
+|===
+|Name of Column 1 |Name of Column 2
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+
+with this asciidoctor content
+
+.content.adoc
+[source]
+----
+|===
+|Name of Column 1 |Name of Column 2
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+----
+
+[.minor]#with default width at 60% of the slide.#
+
+
+[.axis.with-big-images]
+== Slide with ditaa diagram
+
+* {blank}
++
+[.cover]
+[ditaa]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+....
+
+* With this asciidoctor content
++
+.content.adoc
+[source]
+----
+[ditaa]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+....
+----
+
+
+
+[.axis.with-big-images]
+== Slide with plantuml diagram
+
+* {blank}
++
+[plantuml]
+....
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+elseif (condition C) then (yes)
+  :Text 3;
+elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+....
+
+* With this asciidoctor content
++
+.content.adoc
+[source]
+----
+[plantuml]
+....
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+elseif (condition C) then (yes)
+  :Text 3;
+elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+....
+----
+
+
+
+[.axis]
+== Text styles
+
+* **Bold text**
++
+__Italic text__
++
+`Some code`
++
+[.focus]#Focus text#
++
+[.minor]#Minor text information#
+* {blank}
++
+[source]
+----
+**Bold text**
+
+__Italic text__
+
+`Some code`
+
+[.focus]#Focus text#
+
+[.minor]#Minor text information#
+----
+
+
+
+[.axis.center]
+== Slide with some gif
+
+* {blank}
++
+image::https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif[]
+
+* With this asciidoctor content
++
+.content.adoc
+[source]
+----
+image::your_gif.gif[]
+----
+
+
+
+[.axis.center]
+== Slide with some video
+
+* {blank}
++
+video::https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.mp4[]
+
+* With this asciidoctor content
++
+.content.adoc
+[source]
+----
+video::your_video.mp4[]
+----

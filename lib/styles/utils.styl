@@ -1,0 +1,11 @@
+pct(val, percentage)
+  val * (percentage / 100)
+
+sw(percentage)
+  pct($slide-width, percentage)
+
+sh(percentage)
+  pct($slide-height, percentage)
+
+rem-calc(value)
+  ((u = unit(value)) is 'px') ? unit(round(value/16, 4), 'rem') : value

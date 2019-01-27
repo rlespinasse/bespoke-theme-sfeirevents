@@ -1,0 +1,13 @@
+Gemfile.lock
+.bundle
+
+.asciidoctor
+diag-*
+bespoke-theme-*
+
+dist/
+node_modules
+
+.idea
+.DS_Store
+*.iml

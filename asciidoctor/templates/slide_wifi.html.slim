@@ -1,0 +1,20 @@
+- _wifi_sid = attr 'wifi-sid'
+- _wifi_password = attr 'wifi-password'
+section.wifi.bg-school
+  - content_for :content
+    p.wifi-sid
+      | WIFI:
+      span=_wifi_sid
+    p.wifi-password
+      | MDP:
+      span=_wifi_password
+    - unless (_content = content).empty?
+      =_content
+  - if (option? :enclose) || (document.attr? 'enclose-option')
+    - _notes = pluck_first context: :sidebar, role: 'cue'
+    .content
+      - yield_content :content
+    - if _notes
+      =_notes.convert
+  - else
+    - yield_content :content
