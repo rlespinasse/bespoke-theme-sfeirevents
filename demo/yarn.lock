@@ -393,7 +393,7 @@ bespoke-scale@^1.0.1:
   resolved "https://registry.yarnpkg.com/bespoke-scale/-/bespoke-scale-1.0.1.tgz#657c035d5bf2bcab73eccff009161dbb937f632c"
   integrity sha1-ZXwDXVvyvKtz7M/wCRYdu5N/Yyw=
 
-bespoke-theme-sfeirschool@../.:
+bespoke-theme-sfeirevents@../.:
   version "1.0.0"
 
 bespoke@^1.1.0:

@@ -1,6 +1,6 @@
 'use strict';
 
-var bespoke_theme = 'bespoke-theme-sfeirschool'
+var bespoke_theme = 'bespoke-theme-sfeirevents'
 
 var pkg = require('./package.json'),
   autoprefixer = require('gulp-autoprefixer'),

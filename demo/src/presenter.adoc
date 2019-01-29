@@ -8,11 +8,11 @@ Welcome message
 //end::welcome[]
 
 {slide}
-//tag::wifi[]
+//tag::schoolwifi[]
 All attendees can configure the wifi connection
-//end::wifi[]
+//end::schoolwifi[]
 
 {slide}
-//tag::tweet[]
+//tag::schooltweet[]
 All attendees can tweet on this sfeir school
-//end::tweet[]
+//end::schooltweet[]

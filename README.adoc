@@ -1,16 +1,20 @@
-= bespoke-theme-sfeirschool
+= bespoke-theme-sfeirevents
 :uri-bespokejs: http://markdalgleish.com/projects/bespoke.js
 :uri-bespoketheme: https://github.com/markdalgleish/generator-bespoketheme
 :uri-umd: https://github.com/umdjs/umd
-:uri-min: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/dist/bespoke-theme-sfeirschool.min.js
-:uri-dev: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/dist/bespoke-theme-sfeirschool.js
-:uri-images: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/lib/images
-:uri-templates: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/asciidoctor/templates
-:uri-demo-gulp: https://raw.github.com/rlespinasse/bespoke-theme-sfeirschool/master/demo/gulpfile.js
-:uri-demo: http://rlespinasse.github.io/bespoke-theme-sfeirschool
+:uri-min: https://raw.github.com/rlespinasse/bespoke-theme-sfeirevents/master/dist/bespoke-theme-sfeirevents.min.js
+:uri-dev: https://raw.github.com/rlespinasse/bespoke-theme-sfeirevents/master/dist/bespoke-theme-sfeirevents.js
+:uri-images: https://raw.github.com/rlespinasse/bespoke-theme-sfeirevents/master/lib/images
+:uri-templates: https://raw.github.com/rlespinasse/bespoke-theme-sfeirevents/master/asciidoctor/templates
+:uri-demo-gulp: https://raw.github.com/rlespinasse/bespoke-theme-sfeirevents/master/demo/gulpfile.js
+:uri-demo: http://rlespinasse.github.io/bespoke-theme-sfeirevents
 :uri-license: http://en.wikipedia.org/wiki/MIT_License
 
-A `Sfeir School` theme for {uri-bespokejs}[Bespoke.js] &mdash; {uri-demo}[View demo]
+A `Sfeir Events` theme for {uri-bespokejs}[Bespoke.js] &mdash; {uri-demo}[View demo]
+
+== Possible Events
+
+* Sfeir School (`:event: school` in **index.adoc**)
 
 == Download
 
@@ -29,10 +33,10 @@ For example, when using CommonJS modules:
 [source,js]
 ----
 var bespoke = require('bespoke'),
-  sfeirschool = require('bespoke-theme-sfeirschool');
+  sfeirevents = require('bespoke-theme-sfeirevents');
 
 bespoke.from('#presentation', [
-  sfeirschool()
+  sfeirevents()
 ]);
 ----
 
@@ -41,7 +45,7 @@ When using browser globals:
 [source,js]
 ----
 bespoke.from('#presentation', [
-  bespoke.themes.sfeirschool()
+  bespoke.themes.sfeirevents()
 ]);
 ----
 
@@ -51,21 +55,21 @@ bespoke.from('#presentation', [
 
 [source,bash]
 ----
-$ npm install bespoke-theme-sfeirschool --save-dev
+$ npm install bespoke-theme-sfeirevents --save-dev
 ----
 
 === yarn
 
 [source,bash]
 ----
-$ yarn add bespoke-theme-sfeirschool --dev
+$ yarn add bespoke-theme-sfeirevents --dev
 ----
 
 == More
 
 The demo folder can serve as bootstrap for your presentation.
 
-WARNING: in the `package.json` file, you will need to change the path to `bespoke-theme-sfeirschool` folder or `npm version` (when available).
+WARNING: in the `package.json` file, you will need to change the path to `bespoke-theme-sfeirevents` folder or `npm version` (when available).
 
 == Credits
 

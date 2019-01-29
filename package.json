@@ -1,17 +1,17 @@
 {
-  "name": "bespoke-theme-sfeirschool",
+  "name": "bespoke-theme-sfeirevents",
   "version": "1.0.0",
   "description": "A 'Sfeir School' theme for Bespoke.js",
-  "homepage": "https://github.com/rlespinasse/bespoke-theme-sfeirschool",
-  "bugs": "https://github.com/rlespinasse/bespoke-theme-sfeirschool/issues",
+  "homepage": "https://github.com/rlespinasse/bespoke-theme-sfeirevents",
+  "bugs": "https://github.com/rlespinasse/bespoke-theme-sfeirevents/issues",
   "author": {
     "name": "Romain Lespinasse",
     "url": "https://github.com/rlespinasse"
   },
-  "main": "./dist/bespoke-theme-sfeirschool.js",
+  "main": "./dist/bespoke-theme-sfeirevents.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rlespinasse/bespoke-theme-sfeirschool.git"
+    "url": "git://github.com/rlespinasse/bespoke-theme-sfeirevents.git"
   },
   "scripts": {
     "test": "gulp"
