@@ -1,5 +1,5 @@
 var bespoke = require('bespoke'),
-    sfeirschool = require('bespoke-theme-sfeirschool'),
+    sfeirevents = require('bespoke-theme-sfeirevents'),
     bullets = require('./bespoke-bullets-patched'),
     classes = require('bespoke-classes'),
     cursor = require('bespoke-cursor'),
@@ -13,7 +13,7 @@ var bespoke = require('bespoke'),
     scale = require('bespoke-scale')
 
 bespoke.from({ parent: 'article.deck', slides: 'section' }, [
-  sfeirschool(),
+  sfeirevents(),
   classes(),
   scale('transform'),
   nav(),

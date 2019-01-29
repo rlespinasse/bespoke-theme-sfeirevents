@@ -11,7 +11,7 @@
     "bespoke-overview": "^1.0.4",
     "bespoke-progress": "^1.0.0",
     "bespoke-scale": "^1.0.1",
-    "bespoke-theme-sfeirschool": "../.",
+    "bespoke-theme-sfeirevents": "../.",
     "browserify": "^14.4.0",
     "decktape": "^2.9.1",
     "del": "^3.0.0",

@@ -1,4 +1,5 @@
 = Welcome to Sfeir School: The Current Sfeir School
+// ------------------------------------------------------------------------
 // GLOBAL CONFIGURATION
 :!sectids:
 :imagesdir: images
@@ -9,20 +10,26 @@
 :iconfont-remote:
 :iconfont-cdn: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 :docinfo: shared
+// ------------------------------------------------------------------------
 // CONFIGURATION CONTENT
 :uri-script: presenter.adoc
+// ------------------------------------------------------------------------
+// CONFIGURATION EVENT
+:event: school
 :title-background: bg-blue
 //:title-background: bg-red
 //:title-background: bg-pink
+// ------------------------------------------------------------------------
 // CONFIGURATION SCHOOL
 :school-code: TCSS
 :school-level: 100
 //:school-level: 200
 //:school-level: 300
-:twitter-hashtag: #thecurrentsfeirschool
-:twitter-sfeiragency: @twitterhandle
-:wifi-sid: OUR_WIFI_NAME
-:wifi-password: OUR_WIFI_PASSWORD
+:school-twitter-hashtag: #thecurrentsfeirschool
+:school-twitter-sfeiragency: @twitterhandle
+:school-wifi-sid: OUR_WIFI_NAME
+:school-wifi-password: OUR_WIFI_PASSWORD
+// ------------------------------------------------------------------------
 // CONFIGURATION SPEAKERS
 // speaker image must have dimensions equals to 480px per 480px,
 // and available under :imagesdir: folder
@@ -38,30 +45,39 @@
 //:speaker-3-name: ...
 //:speaker-3-position: ...
 //:speaker-3-twitter: ...
+// ------------------------------------------------------------------------
 
 [.cue]
 ****
 include::{uri-script}[tag=welcome]
 ****
 
-[transform=wifi]
+
+
+[transform=schoolwifi]
 == wifi
 
 [.cue]
 ****
-include::{uri-script}[tag=wifi]
+include::{uri-script}[tag=schoolwifi]
 ****
+
+
 
 [transform=speakers]
 == speakers
 
-[transform=tweet]
+
+
+[transform=schooltweet]
 == tweet
 
 [.cue]
 ****
-include::{uri-script}[tag=tweet]
+include::{uri-script}[tag=schooltweet]
 ****
+
+
 
 [.topic]
 == blue (default): topic slide

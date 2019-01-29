@@ -38,16 +38,16 @@ show-presentation:
 .PHONY: generate-pdf
 generate-pdf:
 	rm -rf dist/export || true
-	$(MAKE) dist/export/sfeirschool-content.pdf
+	$(MAKE) dist/export/sfeirevent-content.pdf
 
-dist/export/sfeirschool-content.pdf:
+dist/export/sfeirevent-content.pdf:
 	type decktape || npm install -g decktape
 	mkdir -p dist/export/screenshots
-	cd dist/export/; decktape --screenshots bespoke $(SLIDES_SERVER) sfeirschool-content.pdf
+	cd dist/export/; decktape --screenshots bespoke $(SLIDES_SERVER) sfeirevent-content.pdf
 
 .PHONY: show-pdf
-show-pdf: dist/export/sfeirschool-content.pdf
-	open dist/export/sfeirschool-content.pdf
+show-pdf: dist/export/sfeirevent-content.pdf
+	open dist/export/sfeirevent-content.pdf
 
 # Configuration
 .PHONY: configure

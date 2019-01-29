@@ -40,9 +40,9 @@ gulp.task('stylus', ['clean:stylus'], function() {
 });
 
 gulp.task('browserify', ['clean:browserify', 'stylus'], function() {
-  return gulp.src('lib/bespoke-theme-sfeirschool.js')
+  return gulp.src('lib/bespoke-theme-sfeirevents.js')
     .pipe(isDemo ? plumber() : through())
-    .pipe(browserify({ transform: ['brfs'], standalone: 'bespoke.themes.sfeirschool' }))
+    .pipe(browserify({ transform: ['brfs'], standalone: 'bespoke.themes.sfeirevents' }))
     .pipe(header(template([
       '/*!',
       ' * <%= name %> v<%= version %>',
@@ -53,7 +53,7 @@ gulp.task('browserify', ['clean:browserify', 'stylus'], function() {
       ' */\n\n'
     ].join('\n'), pkg)))
     .pipe(gulp.dest('dist'))
-    .pipe(rename('bespoke-theme-sfeirschool.min.js'))
+    .pipe(rename('bespoke-theme-sfeirevents.min.js'))
     .pipe(uglify())
     .pipe(header(template([
       '/*! <%= name %> v<%= version %> ',
