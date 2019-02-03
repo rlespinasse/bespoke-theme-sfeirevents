@@ -62,7 +62,7 @@
     background #141414 url(images/background_school.png) no-repeat
 
 // Slide layouts
-section:not(.title):not(.topic):not(.schooltweet):not(.schoolwifi):not(.schoollogo):not(.banner):not(.banner-bottom)
+section:not(.title):not(.topic):not(.schooltweet):not(.schoolwifi):not(.schoolevent):not(.lunchevent):not(.shareevent):not(.banner):not(.banner-bottom)
   header
     position absolute
     top 0
@@ -198,18 +198,20 @@ section
       white-space nowrap
 
 .bespoke-slide
-  &.schoollogo
+  &.schoolevent,&.shareevent,&.lunchevent
     &::before
       content ' '
       position absolute
       top 10%
       height 100%
       width 100%
-      background url(images/logo_empty.png) no-repeat
       background-position 50% 0%
     header
       position relative
       top 20%
+  &.schoolevent
+    &::before
+      background url(images/logo_school_empty.png) no-repeat
     .schoolcode
       position absolute
       top 26%
@@ -221,6 +223,12 @@ section
       position absolute
       transform scale(1.7)
       top 45%
+  &.lunchevent
+    &::before
+      background url(images/logo_lunch.png) no-repeat
+  &.shareevent
+    &::before
+      background url(images/logo_share_lille.png) no-repeat
 
 .bespoke-slide
   &.schooltweet

@@ -16,6 +16,8 @@
 // ------------------------------------------------------------------------
 // CONFIGURATION EVENT
 :event: school
+//:event: lunch
+//:event: share
 :title-background: bg-blue
 //:title-background: bg-red
 //:title-background: bg-pink

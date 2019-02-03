@@ -1,23 +1,31 @@
 / recognize id and options for the doctitle (aka header); should be part of Asciidoctor core
 - (attr 'header-opts').split(',').each {|opt| header.set_option opt unless header.option? opt } if attr? 'header-opts'
 - header.id = attr 'header-id'
-- _school_code = attr 'school-code'
-- _school_level = attr 'school-level'
+- _event = attr 'event'
+- if _event == 'school'
+  / Configuration point for 'school' event
+  - _school_code = attr 'school-code'
+  - _school_level = attr 'school-level'
 - _bg_img = _style = nil
 - if (_preamble = pluck_first context: :preamble)
   - unless (_result = _preamble.find_by context: :image, role: 'canvas').empty?
     - (_bg_img = _result[0]).set_attr 'skip-option', ''
     - _style = %[background-image: url(#{image_uri _bg_img.attr(:target)}); background-size: #{(_bg_img.roles & %w[cover contain])[0] || 'cover'}; background-repeat: no-repeat]
-section.title.schoollogo id=header.id class=[role, ('image' if _bg_img), (attr 'title-background' if attr? 'title-background'), ('bg-blue' if !attr? 'title-background')] style=_style data-title='' data-bespoke-backdrop=(attr 'header-backdrop-role')
+/ The logo of the event is set by class '{event}logo'
+section.title id=header.id class=[role, ('image' if _bg_img), (_event + 'event'), (attr 'title-background' if attr? 'title-background'), ('bg-blue' if !attr? 'title-background')] style=_style data-title='' data-bespoke-backdrop=(attr 'header-backdrop-role')
   - content_for :content
     - if (_title_obj = doctitle partition: true, use_fallback: true).subtitle?
       header
         h1=slice_text _title_obj.title, (_slice = header.option? :slice)
-        h2=slice_text (_title_obj.subtitle + ' ' + _school_level), _slice
+        - if _event == 'school'
+          h2=slice_text (_title_obj.subtitle + _school_level), _slice
+        - else
+          h2=slice_text _title_obj.subtitle, _slice
     - else
       h1=slice_text _title_obj.title, (header.option? :slice)
-    p.schoolcode=_school_code
-    div class=['schoollevel', ('level' + _school_level)]
+    - if _event == 'school'
+      p.schoolcode=_school_code
+      div class=['schoollevel', ('level' + _school_level)]
     =_preamble ? _preamble.content : nil
   - if (header.option? :enclose) || (document.attr? 'enclose-option')
       - _notes = _preamble ? (pluck_first context: :sidebar, role: 'cue') : nil
