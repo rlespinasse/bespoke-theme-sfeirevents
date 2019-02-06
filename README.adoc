@@ -75,6 +75,8 @@ WARNING: in the `package.json` file, you will need to change the path to `bespok
 
 This theme was built with {uri-bespoketheme}[generator-bespoketheme].
 
+Thanks to https://github.com/opendevise/presentation-documentation-as-code as inspiration for the css scripts.
+
 == License
 
 {uri-license}[MIT License]
